@@ -5,6 +5,7 @@ import { ProgressBar } from "@/components/ProgressBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PieChart } from "@/components/PieChart";
 import { Badge } from "@/components/ui/badge";
+import Header from "@/components/Header";
 import { 
   Github, 
   Linkedin, 
@@ -40,8 +41,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero">
+      <Header />
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         {/* Animated background shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-primary opacity-20 rounded-full animate-float" />
