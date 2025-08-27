@@ -59,14 +59,8 @@ const Index = () => {
             <TypingAnimation texts={typingTexts} className="font-medium" />
           </div>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            B.Tech Information Technology undergraduate with a passion for exploring and innovating with emerging technologies
+            Be resilient • Be consistent • Be collaborative
           </p>
-          <Button 
-            onClick={() => scrollToSection('projects')}
-            className="btn-hero text-lg px-8 py-6 rounded-full"
-          >
-            View My Work
-          </Button>
         </div>
       </section>
 
