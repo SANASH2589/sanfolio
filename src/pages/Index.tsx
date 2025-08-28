@@ -253,7 +253,7 @@ const Index = () => {
                     variant="outline" 
                     size="sm" 
                     className="mt-2 btn-ghost"
-                    onClick={() => window.open('https://leetcard.jacoblin.cool/SanAsh_2589?theme=dark&font=Karma&ext=heatmap', '_blank')}
+                    onClick={() => window.open('/stats', '_blank')}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Stats
