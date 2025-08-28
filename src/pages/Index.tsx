@@ -31,9 +31,9 @@ const Index = () => {
 
   const learningData = [
     { name: "Web Development", value: 40, color: "hsl(200 100% 50%)" },
-    { name: "Data Analytics", value: 25, color: "hsl(240 100% 65%)" },
-    { name: "DSA/Problem Solving", value: 15, color: "hsl(300 100% 70%)" },
     { name: "Full-Stack", value: 10, color: "hsla(67, 93%, 42%, 1.00)" },
+    { name: "DSA/Problem Solving", value: 15, color: "hsl(300 100% 70%)" },
+    { name: "Data Analytics", value: 25, color: "hsl(240 100% 65%)" },
     { name: "Others", value: 10, color: "hsl(142 71% 45%)" }
   ];
 
