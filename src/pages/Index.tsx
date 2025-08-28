@@ -116,12 +116,14 @@ const Index = () => {
               description="A basic AWT-based project that allows sellers to add products with details and lets customers purchase them via separate portals after login (admin & customer)."
               techStack="Java, AWT, Visual Studio Code"
               githubLink="https://github.com/SANASH2589"
+              liveLink="https://github.com/SANASH2589"
             />
             <ProjectCard
               title="Online Retail Management System"
               description="A web-based system that streamlines retail operations by enabling product browsing, order placement, purchase tracking, and secure payments for customers, while allowing administrators to manage inventory, monitor orders, and oversee transactions efficiently."
               techStack="HTML, CSS, PHP, XAMPP"
               githubLink="https://github.com/SANASH2589"
+              liveLink="https://github.com/SANASH2589"
             />
           </div>
           <div className="text-center mt-8">
