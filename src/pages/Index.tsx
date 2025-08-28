@@ -68,10 +68,12 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
-            <span className="relative z-10">About Me</span>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              About Me
+            </h2>
+            <div className="w-24 h-1 bg-gradient-primary rounded-full shadow-glow mx-auto mt-4"></div>
+          </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -102,10 +104,12 @@ const Index = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 bg-muted/5">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
-            <span className="relative z-10">Featured Projects</span>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Featured Projects
+            </h2>
+            <div className="w-32 h-1 bg-gradient-primary rounded-full shadow-glow mx-auto mt-4"></div>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             <ProjectCard
               title="Construction Material Selling Platform"
@@ -124,10 +128,12 @@ const Index = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
-            <span className="relative z-10">Skills & Expertise</span>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-36 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Skills & Expertise
+            </h2>
+            <div className="w-36 h-1 bg-gradient-primary rounded-full shadow-glow mx-auto mt-4"></div>
+          </div>
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Technical Skills */}
             <Card className="bg-gradient-card border-border">
@@ -188,10 +194,12 @@ const Index = () => {
       {/* Learning & Growth Section */}
       <section id="learning" className="py-20 px-6 bg-muted/5">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
-            <span className="relative z-10">Learning & Growth</span>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Learning & Growth
+            </h2>
+            <div className="w-40 h-1 bg-gradient-primary rounded-full shadow-glow mx-auto mt-4"></div>
+          </div>
           <div className="flex flex-col gap-12">
             {/* Learning Focus Pie Chart */}
             <Card className="bg-gradient-card border-border w-full max-w-4xl mx-auto">
@@ -244,10 +252,12 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-primary bg-clip-text text-transparent relative">
-            <span className="relative z-10">Let's Connect</span>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-28 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
-          </h2>
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Let's Connect
+            </h2>
+            <div className="w-28 h-1 bg-gradient-primary rounded-full shadow-glow mx-auto mt-4"></div>
+          </div>
           <p className="text-lg text-muted-foreground mb-8">
             Feel free to reach out for collaboration, opportunities, or just to say hello!
           </p>
