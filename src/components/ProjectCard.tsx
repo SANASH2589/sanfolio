@@ -33,6 +33,7 @@ export const ProjectCard = ({ title, description, techStack, githubLink, liveLin
               size="sm" 
               className="btn-ghost flex items-center gap-2"
               disabled={!githubLink}
+              onClick={() => githubLink && window.open(githubLink, '_blank')}
             >
               <Github className="w-4 h-4" />
               GitHub
@@ -42,6 +43,7 @@ export const ProjectCard = ({ title, description, techStack, githubLink, liveLin
               size="sm" 
               className="btn-ghost flex items-center gap-2"
               disabled={!liveLink}
+              onClick={() => liveLink && window.open(liveLink, '_blank')}
             >
               <ExternalLink className="w-4 h-4" />
               Live Demo

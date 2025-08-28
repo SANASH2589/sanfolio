@@ -115,12 +115,23 @@ const Index = () => {
               title="Construction Material Selling Platform"
               description="A basic AWT-based project that allows sellers to add products with details and lets customers purchase them via separate portals after login (admin & customer)."
               techStack="Java, AWT, Visual Studio Code"
+              githubLink="https://github.com/SANASH2589"
             />
             <ProjectCard
               title="Online Retail Management System"
               description="A web-based system that streamlines retail operations by enabling product browsing, order placement, purchase tracking, and secure payments for customers, while allowing administrators to manage inventory, monitor orders, and oversee transactions efficiently."
               techStack="HTML, CSS, PHP, XAMPP"
+              githubLink="https://github.com/SANASH2589"
             />
+          </div>
+          <div className="text-center mt-8">
+            <Button 
+              onClick={() => window.open('https://github.com/SANASH2589?tab=repositories', '_blank')}
+              className="btn-hero px-6 py-3 rounded-full"
+            >
+              <Github className="w-5 h-5 mr-2" />
+              More Projects on GitHub
+            </Button>
           </div>
         </div>
       </section>
@@ -222,7 +233,12 @@ const Index = () => {
                 <div className="p-4 border border-border rounded-lg">
                   <h4 className="font-medium mb-2">GitHub Contributions</h4>
                   <p className="text-sm text-muted-foreground">GitHub contribution graph to be integrated</p>
-                  <Button variant="outline" size="sm" className="mt-2 btn-ghost">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-2 btn-ghost"
+                    onClick={() => window.open('https://github.com/SANASH2589', '_blank')}
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     View Profile
                   </Button>
@@ -230,7 +246,12 @@ const Index = () => {
                 <div className="p-4 border border-border rounded-lg">
                   <h4 className="font-medium mb-2">Coding Platforms</h4>
                   <p className="text-sm text-muted-foreground">LeetCode/HackerRank stats coming soon</p>
-                  <Button variant="outline" size="sm" className="mt-2 btn-ghost" disabled>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-2 btn-ghost"
+                    onClick={() => window.open('https://leetcode.com/', '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Stats
                   </Button>
@@ -238,7 +259,12 @@ const Index = () => {
                 <div className="p-4 border border-border rounded-lg">
                   <h4 className="font-medium mb-2">Certifications</h4>
                   <p className="text-sm text-muted-foreground">Workshops and certifications to be added</p>
-                  <Button variant="outline" size="sm" className="mt-2 btn-ghost" disabled>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-2 btn-ghost"
+                    onClick={() => window.open('https://github.com/SANASH2589', '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Certificates
                   </Button>
