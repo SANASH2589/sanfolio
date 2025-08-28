@@ -6,7 +6,6 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { PieChart } from "@/components/PieChart";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
-import CodingStats from "@/components/CodingStats";
 import { 
   Github, 
   Linkedin, 
@@ -246,10 +245,19 @@ const Index = () => {
                     <Github className="w-4 h-4 mr-2" />
                     View Profile
                   </Button>
-                </div>                
-                <div className="p-4 border border-border rounded-lg col-span-2">
-                  <h4 className="font-medium mb-6 text-center">Coding Platforms</h4>
-                  <CodingStats />
+                </div>
+                <div className="p-4 border border-border rounded-lg">
+                  <h4 className="font-medium mb-2">Coding Platforms</h4>
+                  <p className="text-sm text-muted-foreground">LeetCode/HackerRank stats coming soon</p>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="mt-2 btn-ghost"
+                    onClick={() => window.open('https://leetcard.jacoblin.cool/SanAsh_2589?theme=dark&font=Karma&ext=heatmap', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Stats
+                  </Button>
                 </div>
                 <div className="p-4 border border-border rounded-lg">
                   <h4 className="font-medium mb-2">Certifications</h4>
