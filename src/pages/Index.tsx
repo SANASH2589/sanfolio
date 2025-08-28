@@ -16,7 +16,8 @@ import {
   Lightbulb,
   Users,
   Zap,
-  Languages
+  Languages,
+  Download
 } from "lucide-react";
 import profileImage from "@/assets/profile-image.jpg";
 
@@ -67,8 +68,9 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
-            About Me
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
+            <span className="relative z-10">About Me</span>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
@@ -100,8 +102,9 @@ const Index = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 bg-muted/5">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
-            Featured Projects
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
+            <span className="relative z-10">Featured Projects</span>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <ProjectCard
@@ -121,8 +124,9 @@ const Index = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
-            Skills & Expertise
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
+            <span className="relative z-10">Skills & Expertise</span>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-36 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
           </h2>
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Technical Skills */}
@@ -184,28 +188,29 @@ const Index = () => {
       {/* Learning & Growth Section */}
       <section id="learning" className="py-20 px-6 bg-muted/5">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
-            Learning & Growth
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent relative">
+            <span className="relative z-10">Learning & Growth</span>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
           </h2>
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="flex flex-col gap-12">
             {/* Learning Focus Pie Chart */}
-            <Card className="bg-gradient-card border-border">
+            <Card className="bg-gradient-card border-border w-full max-w-4xl mx-auto">
               <CardHeader>
                 <CardTitle className="text-2xl">Current Learning Focus</CardTitle>
                 <CardDescription>Areas of active skill development</CardDescription>
               </CardHeader>
               <CardContent className="flex justify-center">
-                <PieChart data={learningData} size={250} />
+                <PieChart data={learningData} size={300} />
               </CardContent>
             </Card>
 
             {/* Growth Metrics */}
-            <Card className="bg-gradient-card border-border">
+            <Card className="bg-gradient-card border-border w-full max-w-4xl mx-auto">
               <CardHeader>
                 <CardTitle className="text-2xl">Growth Metrics</CardTitle>
                 <CardDescription>Development progress and achievements</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="p-4 border border-border rounded-lg">
                   <h4 className="font-medium mb-2">GitHub Contributions</h4>
                   <p className="text-sm text-muted-foreground">GitHub contribution graph to be integrated</p>
@@ -239,12 +244,27 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-primary bg-clip-text text-transparent">
-            Let's Connect
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-primary bg-clip-text text-transparent relative">
+            <span className="relative z-10">Let's Connect</span>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-28 h-1 bg-gradient-primary rounded-full shadow-glow"></div>
           </h2>
-          <p className="text-lg text-muted-foreground mb-12">
+          <p className="text-lg text-muted-foreground mb-8">
             Feel free to reach out for collaboration, opportunities, or just to say hello!
           </p>
+          <div className="mb-8">
+            <Button 
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/resume.pdf'; // You'll need to add your resume PDF to the public folder
+                link.download = 'Sanjai_S_Resume.pdf';
+                link.click();
+              }}
+              className="btn-hero px-8 py-3 rounded-full"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Resume
+            </Button>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <a 
               href="mailto:ash98906@gmail.com"
