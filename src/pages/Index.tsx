@@ -6,6 +6,10 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { PieChart } from "@/components/PieChart";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
+import { StatsModal } from "@/components/StatsModal";
+import { CertificatesModal } from "@/components/CertificatesModal";
+import { MessageModal } from "@/components/MessageModal";
+import { EducationTimeline } from "@/components/EducationTimeline";
 import { 
   Github, 
   Linkedin, 
@@ -19,9 +23,14 @@ import {
   Languages,
   Download
 } from "lucide-react";
+import { useState } from "react";
 import profileImage from "@/assets/profile-image.jpg";
 
 const Index = () => {
+  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
+  const [isCertificatesModalOpen, setIsCertificatesModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  
   const typingTexts = [
     "Tech Enthusiast",
     "Full-Stack Development",
@@ -101,6 +110,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Education Timeline Section */}
+      <EducationTimeline />
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 bg-muted/5">
@@ -253,7 +265,7 @@ const Index = () => {
                     variant="outline" 
                     size="sm" 
                     className="mt-2 btn-ghost"
-                    onClick={() => window.open('https://leetcard.jacoblin.cool/SanAsh_2589?theme=dark&font=Karma&ext=heatmap', '_blank')}
+                    onClick={() => setIsStatsModalOpen(true)}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Stats
@@ -266,7 +278,7 @@ const Index = () => {
                     variant="outline" 
                     size="sm" 
                     className="mt-2 btn-ghost"
-                    onClick={() => window.open('https://github.com/SANASH2589', '_blank')}
+                    onClick={() => setIsCertificatesModalOpen(true)}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Certificates
@@ -290,7 +302,7 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Feel free to reach out for collaboration, opportunities, or just to say hello!
           </p>
-          <div className="mb-8">
+          <div className="mb-8 flex flex-wrap gap-4 justify-center">
             <Button 
               onClick={() => {
                 const link = document.createElement('a');
@@ -302,6 +314,15 @@ const Index = () => {
             >
               <Download className="w-5 h-5 mr-2" />
               Download Resume
+            </Button>
+            
+            <Button 
+              onClick={() => setIsMessageModalOpen(true)}
+              variant="outline" 
+              className="btn-ghost px-8 py-3 rounded-full"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Send Message
             </Button>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -353,6 +374,20 @@ const Index = () => {
           </p>
         </div>
       </footer>
+
+      {/* Modals */}
+      <StatsModal 
+        open={isStatsModalOpen} 
+        onOpenChange={setIsStatsModalOpen} 
+      />
+      <CertificatesModal 
+        open={isCertificatesModalOpen} 
+        onOpenChange={setIsCertificatesModalOpen} 
+      />
+      <MessageModal 
+        open={isMessageModalOpen} 
+        onOpenChange={setIsMessageModalOpen} 
+      />
     </div>
   );
 };
