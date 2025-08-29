@@ -10,10 +10,6 @@ import { StatsModal } from "@/components/StatsModal";
 import { CertificatesModal } from "@/components/CertificatesModal";
 import { MessageModal } from "@/components/MessageModal";
 import { EducationTimeline } from "@/components/EducationTimeline";
-import Background3D from "@/components/Background3D";
-import Interactive3D from "@/components/Interactive3D";
-import Skill3D from "@/components/Skill3D";
-import Project3D from "@/components/Project3D";
 import { 
   Github, 
   Linkedin, 
@@ -55,16 +51,15 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-hero relative">
-      <Background3D />
+    <div className="min-h-screen bg-gradient-hero">
       <Header />
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 z-10">
-        {/* Interactive 3D Hero Element */}
+      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        {/* Animated background shapes */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 right-10 w-64 h-64 opacity-60">
-            <Interactive3D />
-          </div>
+          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-primary opacity-20 rounded-full animate-float" />
+          <div className="absolute bottom-32 right-20 w-24 h-24 bg-gradient-secondary opacity-20 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-glow opacity-30 rounded-full animate-pulse-glow" />
         </div>
         
         <div className="text-center z-10 max-w-4xl mx-auto px-6">
@@ -81,7 +76,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 relative z-10">
+      <section id="about" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
@@ -120,18 +115,13 @@ const Index = () => {
       <EducationTimeline />
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-muted/5 relative z-10">
+      <section id="projects" className="py-20 px-6 bg-muted/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Featured Projects
             </h2>
             <div className="w-32 h-1 bg-gradient-primary rounded-full shadow-glow mx-auto mt-4"></div>
-          </div>
-          
-          {/* 3D Projects Preview */}
-          <div className="mb-16">
-            <Project3D />
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <ProjectCard
@@ -162,18 +152,13 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-6 relative z-10">
+      <section id="skills" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Skills & Expertise
             </h2>
             <div className="w-36 h-1 bg-gradient-primary rounded-full shadow-glow mx-auto mt-4"></div>
-          </div>
-          
-          {/* 3D Skills Visualization */}
-          <div className="mb-16">
-            <Skill3D />
           </div>
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Technical Skills */}
@@ -233,7 +218,7 @@ const Index = () => {
       </section>
 
       {/* Learning & Growth Section */}
-      <section id="learning" className="py-20 px-6 bg-muted/5 relative z-10">
+      <section id="learning" className="py-20 px-6 bg-muted/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
@@ -306,7 +291,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 relative z-10">
+      <section id="contact" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
