@@ -55,7 +55,7 @@ const Index = () => {
         
         <div className="text-center z-10 max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-gradient">
-            w
+            Sanjai S
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-8 h-8">
             <TypingAnimation texts={typingTexts} className="font-medium" />
