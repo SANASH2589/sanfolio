@@ -236,8 +236,8 @@ const Index = () => {
                 <CardTitle className="text-2xl">Current Learning Focus</CardTitle>
                 <CardDescription>Areas of active skill development</CardDescription>
               </CardHeader>
-              <CardContent className="flex justify-center">
-                <PieChart3D data={learningData} size={300} />
+              <CardContent className="flex justify-center p-6">
+                <PieChart3D data={learningData} />
               </CardContent>
             </Card>
 

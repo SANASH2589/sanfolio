@@ -86,8 +86,8 @@ const PieChart3DScene: React.FC<{ data: PieChart3DProps['data'] }> = ({ data }) 
               startAngle={startAngle}
               endAngle={endAngle}
               color={item.color}
-              radius={2}
-              height={0.3}
+              radius={1.8}
+              height={0.4}
             />
           );
           
@@ -99,20 +99,28 @@ const PieChart3DScene: React.FC<{ data: PieChart3DProps['data'] }> = ({ data }) 
       <OrbitControls 
         enablePan={false}
         enableZoom={true}
-        minDistance={3}
-        maxDistance={8}
+        minDistance={4}
+        maxDistance={12}
         autoRotate={true}
-        autoRotateSpeed={2}
+        autoRotateSpeed={1}
+        maxPolarAngle={Math.PI * 0.8}
+        minPolarAngle={Math.PI * 0.2}
       />
     </>
   );
 };
 
-export const PieChart3D: React.FC<PieChart3DProps> = ({ data, size = 300 }) => {
+export const PieChart3D: React.FC<PieChart3DProps> = ({ data, size = 400 }) => {
   return (
-    <div className="flex flex-col items-center space-y-4">
-      <div style={{ width: size, height: size }}>
-        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+    <div className="flex flex-col items-center space-y-4 w-full">
+      <div 
+        className="w-full max-w-lg mx-auto rounded-lg overflow-hidden bg-gradient-card/20"
+        style={{ aspectRatio: '1 / 1', minHeight: '350px' }}
+      >
+        <Canvas 
+          camera={{ position: [0, 2, 6], fov: 45 }}
+          style={{ width: '100%', height: '100%' }}
+        >
           <PieChart3DScene data={data} />
         </Canvas>
       </div>
