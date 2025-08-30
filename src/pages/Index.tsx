@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { TypingAnimation } from "@/components/TypingAnimation";
 import { ProgressBar } from "@/components/ProgressBar";
 import { ProjectCard } from "@/components/ProjectCard";
-import { PieChart } from "@/components/PieChart";
+import { PieChart3D } from "@/components/PieChart3D";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import { StatsModal } from "@/components/StatsModal";
@@ -237,7 +237,7 @@ const Index = () => {
                 <CardDescription>Areas of active skill development</CardDescription>
               </CardHeader>
               <CardContent className="flex justify-center">
-                <PieChart data={learningData} size={300} />
+                <PieChart3D data={learningData} size={300} />
               </CardContent>
             </Card>
 
