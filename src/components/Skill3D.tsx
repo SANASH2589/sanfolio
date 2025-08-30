@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { Sphere, Float, Text3D, OrbitControls } from '@react-three/drei';
+import { Sphere, Float, OrbitControls } from '@react-three/drei';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -36,15 +36,7 @@ const SkillSphere = ({
             emissiveIntensity={0.2}
           />
         </Sphere>
-        <Text3D
-          font="/fonts/helvetiker_regular.typeface.json"
-          size={0.2}
-          height={0.02}
-          position={[0, size + 0.5, 0]}
-        >
-          {skill}
-          <meshStandardMaterial color="#ffffff" />
-        </Text3D>
+        {/* Text3D removed due to missing font file - using HTML overlay instead */}
       </group>
     </Float>
   );
@@ -60,7 +52,7 @@ const Skill3D = () => {
   ];
 
   return (
-    <div className="h-96 w-full">
+    <div className="h-96 w-full relative">
       <Canvas camera={{ position: [0, 0, 8], fov: 75 }}>
         <ambientLight intensity={0.4} />
         <pointLight position={[10, 10, 10]} intensity={0.8} />
@@ -83,6 +75,30 @@ const Skill3D = () => {
           autoRotateSpeed={1}
         />
       </Canvas>
+      
+      {/* HTML Overlay for Skill Labels */}
+      <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+        <div className="text-center">
+          <h3 className="text-xl font-semibold text-white mb-4 drop-shadow-lg">Interactive Skills</h3>
+          <div className="grid grid-cols-2 gap-4 max-w-xs">
+            {skills.map((skill, index) => (
+              <div key={index} className="text-center">
+                <div 
+                  className="w-4 h-4 rounded-full mx-auto mb-1" 
+                  style={{ backgroundColor: skill.color }}
+                />
+                <span className="text-sm text-white drop-shadow-md font-medium">
+                  {skill.name}
+                </span>
+                <br />
+                <span className="text-xs text-white/80 drop-shadow-md">
+                  {skill.percentage}%
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
