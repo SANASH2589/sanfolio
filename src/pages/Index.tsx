@@ -60,7 +60,7 @@ const Index = () => {
           <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-primary opacity-20 rounded-full animate-float" />
           <div className="absolute bottom-32 right-20 w-24 h-24 bg-gradient-secondary opacity-20 rounded-full animate-float" style={{ animationDelay: '2s' }} />
           <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-glow opacity-30 rounded-full animate-pulse-glow" />
-          <div className="absolute top-80 right-30 w-24 h-24 bg-gradient-primary opacity-40 rounded-full animate-float" />
+          <div className="absolute top-80 right-10 w-24 h-24 bg-gradient-primary opacity-40 rounded-full animate-float" />
         </div>
         
         <div className="text-center z-10 max-w-4xl mx-auto px-6">
