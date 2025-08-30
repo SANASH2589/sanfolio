@@ -62,7 +62,7 @@ const Index = () => {
           <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-glow opacity-30 rounded-full animate-pulse-glow" />
           <div className="absolute top-60 right-40 w-20 h-20 bg-gradient-primary opacity-25 rounded-full animate-bounce" />
           <div className="absolute bottom-10 left-40 w-28 h-28 bg-gradient-secondary opacity-20 rounded-full animate-spin-slow" />
-          <div className="absolute top-2/3 right-1/4 w-14 h-14 bg-gradient-card opacity-50 rounded-full animate-ping" />
+          <div className="absolute top-2/3 right-1/4 w-14 h-14 bg-gradient-blood opacity-50 rounded-full animate-ping" />
         </div>
         
         <div className="text-center z-10 max-w-4xl mx-auto px-6">
